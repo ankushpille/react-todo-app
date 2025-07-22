@@ -13,6 +13,7 @@ function ConditionalRender(){
         <button onClick={toggleLogin}>{isLoggedin ? 'logout' : 'login'}</button>
 
         {isLoggedin ? 'welcomeback' : 'please login'}
+        {!isLoggedin ? 'please login' : 'logout'}
         </>
     )
 }
