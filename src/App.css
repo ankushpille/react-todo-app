@@ -6,6 +6,15 @@ h1{
     color: blue;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .container{
     
+     flex-direction: column; /*stack items vertically */
+     justify-content: center; /*verticall center*/
+     align-items: center; /*horizantaly center */
+     height: 100vh;
 }
