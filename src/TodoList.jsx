@@ -24,7 +24,9 @@ export default function TodoList(){
         <button id="addButton" onClick={handleOnclick}>Add</button>
          <ul>
             {inputValue.map((text,index) => (
-                 <li key={index}>{text}</li>
+                 <li key={index} style={{paddingLeft : "114px"}}>{text}
+                 <button>Edit</button>
+                 </li> 
             ))}
          </ul>
           
