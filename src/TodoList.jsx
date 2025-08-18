@@ -1,40 +1,65 @@
-import './App.css'
-import { useState } from 'react'
+import "./App.css";
+import { useState, useEffect, useRef } from "react";
 
-export default function TodoList(){
-  const [text,setText] = useState('')
-  const [inputValue,setInputvalue] = useState([])
+export default function TodoList() {
+  const [text, setText] = useState("");
+  const [inputValue, setInputvalue] = useState([]);
+  const [editIndex, setEditIndex] = useState(null);
 
-   const handlechange = (e) => {
-    setText(e.target.value)
-   }
+  const inputref = useRef(null);
 
-   const handleOnclick = () => {
-     setInputvalue([...inputValue,text])
-   }
+  useEffect(() => {
+    if (editIndex !== null && inputref.current) {
+      inputref.current.focus();
+    }
+  }, [editIndex]);
+  const handlechange = (e) => {
+    setText(e.target.value);
+  };
 
-   console.log("inputvalue",inputValue)
+  const handleEdit = (index) => {
+    console.log("inputvalue[index]", inputValue[index]);
+    setText(inputValue[index]);
+    setEditIndex(index);
+  };
 
-    return (
+  const handleOnclick = () => {
+    if (editIndex !== null) {
+      const updated = [...inputValue];
+      updated[editIndex] = text;
+      setInputvalue(updated);
+      setEditIndex(null);
+    } else {
+      setInputvalue([...inputValue, text]);
+    }
+    setText("");
+  };
 
-        <>
-        <div className='container'> 
+  const handleDelete = (index) => {
+    const updated = [...inputValue];
+    updated.splice(index, 1);
+    setInputvalue(updated);
+    setText("");
+  };
+
+  return (
+    <>
+      <div className="container">
         <h1>TodoList</h1>
-        <input type="text" onChange={handlechange}/>
-        <button id="addButton" onClick={handleOnclick}>Add</button>
-         <ul>
-            {inputValue.map((text,index) => (
-                 <li key={index} className='todo-item'>
-                    <span>{text}</span>
-                 <button >Edit</button>
-                 <button>delete</button>
-                 </li> 
-            ))}
-         </ul>
-          
-        </div>
-
-        
-        </>
-    )
+        <input type="text" value={text} ref={inputref} onChange={handlechange} />
+        <button id="addButton" onClick={handleOnclick}>
+          {editIndex !== null ? "update" : "Add"}
+        </button>
+        <ul>
+          {inputValue.map((text, index) => (
+            <li key={index} className="todo-item">
+              <span>{text}</span>
+              <button onClick={() => handleEdit(index)}>Edit</button>
+              <button onClick={() => handleDelete(index)}>delete</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
 }
