@@ -11,10 +11,29 @@ html, body {
   margin: 0;
 }
 
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container{
     
+     display: flex;
      flex-direction: column; /*stack items vertically */
      justify-content: center; /*verticall center*/
      align-items: center; /*horizantaly center */
      height: 100vh;
+     width: 100%;
+}
+
+.todo-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.todo-item button{
+  margin-left: 1px;
 }
