@@ -6,8 +6,10 @@
 // import ConditionalRender from './ConditionalRender'
 // import ListkeysExample from './ListKeys'
 // import Eventhandling from './Eventhandling'
+import ConditionalRendering from "./ConditionalRender"
 import HelloWorld from "./HelloWorld"
 import PropsExample from "./PropExample"
+import UsestatePractice from "./UsestatePractice"
 
 
 function App() {
@@ -22,6 +24,9 @@ function App() {
        {/* <TodoList/> */}
        <HelloWorld />
        <PropsExample />
+       <UsestatePractice />
+       <ConditionalRendering />
+       
 
     </>
   )

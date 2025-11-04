@@ -1,22 +1,17 @@
 import { useState } from "react";
 
-function ConditionalRender(){
-    const [isLoggedin,setisLoggedin] = useState(false);
+function ConditionalRendering() {
+  const [isLoggedIn, setisLoggedIn] = useState(false);
 
-    const toggleLogin = () => {
-        setisLoggedin(!isLoggedin)
-    }
+  const handleLoggedIn = () => {
+    setisLoggedIn(!isLoggedIn);
+  };
 
-    return(
-        <>
-        {/* conditional render */}
-        <button onClick={toggleLogin}>{isLoggedin ? 'logout' : 'login'}</button>
-
-        {isLoggedin ? 'welcomeback' : 'please login'}
-        {!isLoggedin ? 'please login' : 'logout'}
-        <h1>testing </h1>
-        </>
-    )
+  return(
+    <>
+       <button onClick={handleLoggedIn}>{isLoggedIn ? 'logout' : 'login'}</button>
+    </>
+  )
 }
 
-export default ConditionalRender;
+export default ConditionalRendering;
