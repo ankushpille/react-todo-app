@@ -7,6 +7,7 @@
 // import ListkeysExample from './ListKeys'
 // import Eventhandling from './Eventhandling'
 import ConditionalRendering from "./ConditionalRender"
+import Eventhandling from "./Eventhandling2"
 import HelloWorld from "./HelloWorld"
 import ListandKeys from "./ListandKeys"
 import PropsExample from "./PropExample"
@@ -28,6 +29,7 @@ function App() {
        <UsestatePractice />
        <ConditionalRendering />
        <ListandKeys />
+       <Eventhandling />
 
     </>
   )
