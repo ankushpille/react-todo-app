@@ -7,6 +7,7 @@
 // import ListkeysExample from './ListKeys'
 // import Eventhandling from './Eventhandling'
 import HelloWorld from "./HelloWorld"
+import PropsExample from "./PropExample"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
        {/* <Eventhandling/> */}
        {/* <TodoList/> */}
        <HelloWorld />
+       <PropsExample />
 
     </>
   )
