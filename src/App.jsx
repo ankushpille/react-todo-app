@@ -12,6 +12,7 @@ import HelloWorld from "./HelloWorld"
 import ListandKeys from "./ListandKeys"
 import PropsExample from "./PropExample"
 import UsestatePractice from "./UsestatePractice"
+import UseEffectExample from "./UseEffectExample1"
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
        <ConditionalRendering />
        <ListandKeys />
        <Eventhandling />
+       <UseEffectExample/>
 
     </>
   )
