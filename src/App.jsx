@@ -13,6 +13,7 @@ import ListandKeys from "./ListandKeys"
 import PropsExample from "./PropExample"
 import UsestatePractice from "./UsestatePractice"
 import UseEffectExample from "./UseEffectExample1"
+import SimpleForm from "./Forms"
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
        <ListandKeys />
        <Eventhandling />
        <UseEffectExample/>
+       <SimpleForm />
 
     </>
   )
