@@ -15,12 +15,19 @@ import UsestatePractice from "./UsestatePractice"
 import UseEffectExample from "./UseEffectExample1"
 import SimpleForm from "./Forms"
 import Useeffectcleanup from "./Useeffectcleanup"
+import UseToggle from "./useToogle"
 
 
 function App() {
 
+  const{value,handleToggle} = UseToggle(false)
+
   return (
     <>
+     
+     <button onClick={handleToggle}>
+       {value ? 'hide message' : 'show message'}
+      </button>
       {/* <Props/> */}
        {/* <UseStateExample/> */}
        {/* <ConditionalRender/> */}
@@ -35,6 +42,7 @@ function App() {
        <Eventhandling />
        <UseEffectExample/>
        <SimpleForm /> */}
+       {value ? 'hello ankush': 'this is customhookExample'}
        <Useeffectcleanup />
 
     </>
