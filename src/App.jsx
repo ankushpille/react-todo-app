@@ -14,6 +14,7 @@ import PropsExample from "./PropExample"
 import UsestatePractice from "./UsestatePractice"
 import UseEffectExample from "./UseEffectExample1"
 import SimpleForm from "./Forms"
+import Useeffectcleanup from "./Useeffectcleanup"
 
 
 function App() {
@@ -26,14 +27,15 @@ function App() {
        {/* <ListkeysExample/> */}
        {/* <Eventhandling/> */}
        {/* <TodoList/> */}
-       <HelloWorld />
+       {/* <HelloWorld />
        <PropsExample />
        <UsestatePractice />
        <ConditionalRendering />
        <ListandKeys />
        <Eventhandling />
        <UseEffectExample/>
-       <SimpleForm />
+       <SimpleForm /> */}
+       <Useeffectcleanup />
 
     </>
   )
