@@ -17,6 +17,7 @@ import SimpleForm from "./Forms"
 import Useeffectcleanup from "./Useeffectcleanup"
 import UseToggle from "./useToogle"
 import WindowSizeDisplay from "./useWindowSize"
+import UseMemoExample from "./UseMemoExample"
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
        {value ? 'hello ankush': 'this is customhookExample'}
        <Useeffectcleanup />
        <WindowSizeDisplay/>
+       <UseMemoExample />
 
     </>
   )
