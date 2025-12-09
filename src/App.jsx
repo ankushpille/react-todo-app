@@ -19,6 +19,7 @@ import UseToggle from "./useToogle"
 import WindowSizeDisplay from "./useWindowSize"
 import UseMemoExample from "./UseMemoExample"
 import UseEffectExample1 from "./UseEffectExampl1"
+import Counter from '../Counter'
 
 
 function App() {
@@ -49,7 +50,8 @@ function App() {
        {/* <Useeffectcleanup />
        <WindowSizeDisplay/>
        <UseMemoExample /> */}
-       <UseEffectExample1/>
+       {/* <UseEffectExample1/> */}
+       <Counter/>
 
     </>
   )
