@@ -20,6 +20,7 @@ import WindowSizeDisplay from "./useWindowSize"
 import UseMemoExample from "./UseMemoExample"
 import UseEffectExample1 from "./UseEffectExampl1"
 import Counter from '../Counter'
+import Counter1 from './Counter1'
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
        {/* <UseEffectExample1/> */}
        {/* <Counter/> */}
        <h1>Welcome to ankush counter app for practice</h1>
+       <Counter1 />
 
     </>
   )
