@@ -29,9 +29,9 @@ function App() {
   return (
     <>
      
-     <button onClick={handleToggle}>
+     {/* <button onClick={handleToggle}>
        {value ? 'hide message' : 'show message'}
-      </button>
+      </button> */}
       {/* <Props/> */}
        {/* <UseStateExample/> */}
        {/* <ConditionalRender/> */}
@@ -46,12 +46,13 @@ function App() {
        <Eventhandling />
        <UseEffectExample/>
        <SimpleForm /> */}
-       {value ? 'hello ankush': 'this is customhookExample'}
+       {/* {value ? 'hello ankush': 'this is customhookExample'} */}
        {/* <Useeffectcleanup />
        <WindowSizeDisplay/>
        <UseMemoExample /> */}
        {/* <UseEffectExample1/> */}
-       <Counter/>
+       {/* <Counter/> */}
+       <h1>Welcome to ankush counter app for practice</h1>
 
     </>
   )
