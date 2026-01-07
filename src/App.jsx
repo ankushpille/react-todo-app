@@ -54,7 +54,6 @@ function App() {
        <UseMemoExample /> */}
        {/* <UseEffectExample1/> */}
        {/* <Counter/> */}
-       <h1>Welcome to ankush counter app for practice</h1>
        {/* <Counter1 /> */}
        <TodoList1/>
 

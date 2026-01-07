@@ -14,20 +14,26 @@ export function TodoList1() {
   };
   return (
     <>
-      <div className="todo-container">Todo List 1
-      <input
-        type="text"
-        placeholder="Enter a text"
-        onChange={handleInputChange}
-        className="todoInput"
-      />
-      <button onClick={handleAddTodo} className="AddTodo"> Add Todo</button>
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
-        ))}
-      </ul>
+      <div className="parent-container">
+        <div className="todo-container">
+          Todo List 1
+          <input
+            type="text"
+            placeholder="Enter a text"
+            onChange={handleInputChange}
+            className="todoInput"
+          />
+          <button onClick={handleAddTodo} className="AddTodoButton">
+            {" "}
+            Add Todo
+          </button>
+          <ul>
+            {todos.map((todo, index) => (
+              <li key={index}>{todo}</li>
+            ))}
+          </ul>
         </div>
+      </div>
     </>
   );
 }
