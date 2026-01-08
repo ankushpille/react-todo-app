@@ -4,9 +4,20 @@ import "./App.css";
 export function TodoList1() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [editIndex, setEditIndex] = useState(null);
 
   const handleAddTodo = () => {
-    setTodos([...todos, inputValue]);
+    if (editIndex !== null) {
+      const updateTodos = [...todos];
+      updateTodos[editIndex] = inputValue;
+      setTodos(updateTodos);
+      setEditIndex(null);
+      setInputValue("");
+    } else {
+      if (inputValue.trim() === "") return;
+      setTodos([...todos, inputValue]);
+    }
+    setInputValue("");
   };
 
   const handleInputChange = (e) => {
@@ -14,10 +25,9 @@ export function TodoList1() {
   };
 
   const handleEditTodo = (index) => {
-     todos.map((todo) => (
-      console.log("todo", todo[index])
-     ))
-  }
+    setInputValue(todos[index]);
+    setEditIndex(index);
+  };
   return (
     <>
       <div className="parent-container">
@@ -26,16 +36,25 @@ export function TodoList1() {
           <input
             type="text"
             placeholder="Enter a text"
+            value={inputValue}
             onChange={handleInputChange}
             className="todoInput"
           />
           <button onClick={handleAddTodo} className="AddTodoButton">
             {" "}
-            Add Todo
+            {editIndex !== null ? "save todo" : "add todo"}{" "}
           </button>
           <ul>
             {todos.map((todo, index) => (
-              <li key={index}>{todo} <button className="EditButton" onClick = {() => handleEditTodo(index)}>Edit</button></li>
+              <li key={index}>
+                {todo}{" "}
+                <button
+                  className="EditButton"
+                  onClick={() => handleEditTodo(index)}
+                >
+                  Edit
+                </button>
+              </li>
             ))}
           </ul>
         </div>
