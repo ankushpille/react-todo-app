@@ -25,5 +25,11 @@ body{
    align-items: center;
    justify-content: center;
     min-height: 100vh; 
-   
+}
+
+.EditButton{
+  margin-left : 10px;
+  color : white;
+  background-color : green;
+  width : 60px;
 }

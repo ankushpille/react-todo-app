@@ -12,6 +12,12 @@ export function TodoList1() {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
+
+  const handleEditTodo = (index) => {
+     todos.map((todo) => (
+      console.log("todo", todo[index])
+     ))
+  }
   return (
     <>
       <div className="parent-container">
@@ -29,7 +35,7 @@ export function TodoList1() {
           </button>
           <ul>
             {todos.map((todo, index) => (
-              <li key={index}>{todo}</li>
+              <li key={index}>{todo} <button className="EditButton" onClick = {() => handleEditTodo(index)}>Edit</button></li>
             ))}
           </ul>
         </div>
