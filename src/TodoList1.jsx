@@ -30,7 +30,9 @@ export function TodoList1() {
   };
 
   const handleDeleteTodo = (index) => {
-      
+      const updateTodos = [...todos];
+      updateTodos.splice(index,1);
+      setTodos(updateTodos);
   }
   return (
     <>
