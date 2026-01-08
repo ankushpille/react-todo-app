@@ -28,6 +28,10 @@ export function TodoList1() {
     setInputValue(todos[index]);
     setEditIndex(index);
   };
+
+  const handleDeleteTodo = (index) => {
+      
+  }
   return (
     <>
       <div className="parent-container">
@@ -54,6 +58,9 @@ export function TodoList1() {
                 >
                   Edit
                 </button>
+                <button onClick = {() => {
+                  handleDeleteTodo(index);
+                }} className="deletebutton">Delete</button>
               </li>
             ))}
           </ul>

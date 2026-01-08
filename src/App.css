@@ -33,3 +33,10 @@ body{
   background-color : green;
   width : 60px;
 }
+
+.deletebutton{
+  margin-left : 10px;
+  color : white;
+  background-color : red;
+  width : 70px;
+}
